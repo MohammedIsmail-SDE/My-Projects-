@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Prompt Clone</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+        }
+        #terminal {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid green;
+            padding: 10px;
+        }
+        #input {
+            background: none;
+            border: none;
+            color: green;
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <div>Welcome to Command Prompt Clone!</div>
+        <div>Type 'help' for commands.</div>
+        <div>> <input type="text" id="input" autofocus></div>
+    </div>
+
+    <script>
+        const terminal = document.getElementById('terminal');
+        const input = document.getElementById('input');
+        let commandHistory = [];
+        let historyIndex = -1;
+
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const command = input.value.trim();
+                commandHistory.push(command);
+                historyIndex = commandHistory.length;
+                processCommand(command);
+                input.value = '';
+                terminal.scrollTop = terminal.scrollHeight;
+            } else if (e.key === 'ArrowUp') {
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    input.value = commandHistory[historyIndex];
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowDown') {
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    input.value = commandHistory[historyIndex];
+                } else {
+                    historyIndex = commandHistory.length;
+                    input.value = '';
+                }
+                e.preventDefault();
+            }
+        });
+
+        function processCommand(cmd) {
+            const output = document.createElement('div');
+            output.innerHTML = `> ${cmd}`;
+            terminal.appendChild(output);
+
+            const response = document.createElement('div');
+            switch (cmd.toLowerCase()) {
+                case 'help':
+                    response.textContent = 'Available commands: help, echo [text], clear, exit';
+                    break;
+                case 'clear':
+                    terminal.innerHTML = '';
+                    return;
+                case 'exit':
+                    response.textContent = 'Goodbye!';
+                    break;
+                default:
+                    if (cmd.startsWith('echo ')) {
+                        response.textContent = cmd.substring(5);
+                    } else {
+                        response.textContent = `'${cmd}' is not recognized as an internal or external command.`;
+                    }
+            }
+            terminal.appendChild(response);
+            terminal.appendChild(document.createElement('div')).innerHTML = '> <input type="text" id="input" autofocus>';
+            document.getElementById('input').focus();
+        }
+    </script>
+</body>
+</html>
