@@ -1,18 +1,18 @@
 
-#PRATICE-1
+#practice-1
 # input_a = int(input("Enter a number: "))
 # input_b = int(input("Enter another number: "))
 # result = input_a + input_b
 
 # print("The sum is:", result )
 
-#PRATICE-2
+#practice-2
 # A = float(input("enter the area :"))
 # B = float(input("enter the area :"))
 
 # print ( "The area is :"  ,( A+B )/2  )
 
-#PRATICE-3
+#practice-3
 # A  = int(input("Enter number :"))
 
 # B  = int(input("Enter number :"))
@@ -21,5 +21,30 @@
 # str = "My name is ismail and from hyderabad and hyderabad is a it hub city"
 # print (str.find("hyderabad"))
 
-name = input("Enter your name :")
-print("Length of my name is :", len(name))
+# name = input("Enter your name :")
+# print("Length of my name is :", len(name))
+# str = "hi my name is ismail $$$"
+# print (str.count("$"))
+# marks = int(input("please enter your marks : "))
+# if(marks >= 90 and marks <= 100):
+#     grade  = "A"
+    
+# elif (marks >=80 and marks < 90):
+#     grade = "B"
+#     print("your grade is :", grade)
+# elif (marks >=70 and marks < 80):
+#     grade = "C"
+#     print("your grade is :", grade) 
+# else:
+#     grade = "D"
+#     print("your grade is :", grade)
+num = int (input ("enter your number : "))
+if (num % 2 ==0):
+    print ("the number is even")
+else :  print (" the number is odd") 
+ 
+
+
+
+
+
