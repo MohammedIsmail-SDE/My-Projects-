@@ -38,13 +38,42 @@
 # else:
 #     grade = "D"
 #     print("your grade is :", grade)
-num = int (input ("enter your number : "))
-if (num % 2 ==0):
-    print ("the number is even")
-else :  print (" the number is odd") 
- 
+# num = int (input ("enter your number : "))
+# if (num % 2 ==0):
+#     print ("the number is even")
+# else :  print (" the number is odd") 
+# dictionary = {
+#     "cat" : "a small animal",
+#     "table" :["a pice of furniture", "list of facts & figure"]
+# }
+# print (dictionary)
+# subject = {
+#     "python","java","c++","python","javascript","java","python","java","c++","c"
 
+# }
+# print (subject)
+# marks = {}
 
+# x = int(input("enter phy :"))
+# marks.update({"phy" : x})
 
+# x = int(input("enter chy :"))
+# marks.update({"chy" : x})
+
+# x = int(input("enter bio :"))
+# marks.update({"bio" : x})
+
+# x = int(input("enter eng :"))
+# marks.update({"eng" : x})
+
+# x = int(input("enter tlu :"))
+# marks.update({"tlu" : x})
+
+# marks.sum = (marks , marks)
+
+# print(marks)
+
+value = (9,"9.0")
+print (value)
 
 
