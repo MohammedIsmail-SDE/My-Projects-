@@ -73,7 +73,15 @@
 
 # print(marks)
 
-value = (9,"9.0")
-print (value)
+# value = (9,"9.0")
+# print (value)
+
+
+
+numbers = 100
+while numbers >= 1 :
+    print (numbers)
+    numbers -= 1
+
 
 
