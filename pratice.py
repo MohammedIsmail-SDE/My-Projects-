@@ -78,10 +78,13 @@
 
 
 
-numbers = 100
-while numbers >= 1 :
-    print (numbers)
-    numbers -= 1
-
-
+numbers = [1,4,9,16,25,36,49,64,81,100]
+x = int(input ( "enter your number :"))
+for elm in numbers :
+  if elm == x :
+   print("number fount:")
+    
+else :
+ print ("number not fount") 
+  
 
