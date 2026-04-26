@@ -1,100 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Command Prompt Clone</title>
-    <style>
-        body {
-            background-color: black;
-            color: green;
-            
-            font-family: 'Courier New', monospace;
-            padding: 20px;
-        }
-        #terminal {
-            height: 400px;
-            overflow-y: auto;
-            border: 1px solid green;
-            padding: 10px;
-        }
-        #input {
-            background: none;
-            border: none;
-            color: green;
-            font-family: inherit;
-            font-size: inherit;
-            outline: none;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YourTube – Watch Anything</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #000000;
+      --surface: #1a1a1a;
+      --surface2: #222222;
+      --border: #2e2e2e;
+      --text: #f1f1f1;
+      --text-muted: #aaaaaa;
+      --red: #fff700f6;
+      --red-hover: #cc0000;
+      --accent: #3ea6ff;
+      --sidebar-w: 240px;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 56px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 16px;
+      gap: 16px;
+    }
+
+    .nav-left { display: flex; align-items: center; gap: 16px; }
+    .hamburger { cursor: pointer; color: var(--text-muted); font-size: 20px; padding: 8px; border-radius: 50%; transition: background .2s; }
+    .hamburger:hover { background: var(--surface2); }
+
+    .logo { display: flex; align-items: center; gap: 4px; text-decoration: none; }
+    .logo-icon { color: var(--red); font-size: 26px; }
+    .logo-text { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+    .logo-text span { color: var(--red); }
+
+    /* Search bar */
+    .search-bar {
+      flex: 1; max-width: 600px;
+      display: flex; align-items: center;
+    }
+    .search-bar input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 20px 0 0 20px;
+      padding: 8px 16px;
+      font-size: 15px;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .search-bar input:focus { border-color: var(--accent); }
+    .search-bar input::placeholder { color: var(--text-muted); }
+    .search-bar button {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-left: none;
+      border-radius: 0 20px 20px 0;
+      padding: 8px 20px;
+      color: var(--text);
+      font-size: 16px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .search-bar button:hover { background: #333; }
+
+    .nav-right { display: flex; align-items: center; gap: 8px; }
+    .nav-btn {
+      background: none; border: none;
+      color: var(--text-muted); font-size: 20px;
+      cursor: pointer; padding: 8px; border-radius: 50%;
+      transition: background .2s, color .2s;
+      position: relative;
+    }
+    .nav-btn:hover { background: var(--surface2); color: var(--text); }
+    .nav-btn .badge {
+      position: absolute; top: 4px; right: 4px;
+      background: var(--red); color: #fff;
+      font-size: 9px; font-weight: 700;
+      border-radius: 50%; width: 16px; height: 16px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .sign-in-btn {
+      display: flex; align-items: center; gap: 8px;
+      border: 1px solid var(--accent); color: var(--accent);
+      background: none; border-radius: 20px;
+      padding: 6px 14px; font-size: 14px; font-weight: 500;
+      cursor: pointer; transition: background .2s;
+      white-space: nowrap;
+    }
+    .sign-in-btn:hover { background: rgba(62,166,255,.1); }
+
+    /* ── LAYOUT ── */
+    .layout { display: flex; margin-top: 56px; min-height: calc(100vh - 56px); }
+
+    /* ── SIDEBAR ── */
+    aside {
+      width: var(--sidebar-w);
+      position: fixed; top: 56px; bottom: 0; left: 0;
+      overflow-y: auto; overflow-x: hidden;
+      background: var(--bg);
+      padding: 12px 0;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    aside::-webkit-scrollbar { width: 4px; }
+    aside::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    .sidebar-item {
+      display: flex; align-items: center; gap: 20px;
+      padding: 10px 24px;
+      border-radius: 10px;
+      margin: 0 8px;
+      cursor: pointer;
+      font-size: 14px; font-weight: 400;
+      color: var(--text);
+      transition: background .15s;
+    }
+    .sidebar-item:hover, .sidebar-item.active { background: var(--surface2); }
+    .sidebar-item.active { font-weight: 500; }
+    .sidebar-item i { width: 20px; text-align: center; font-size: 18px; color: var(--text); }
+
+    .sidebar-section {
+      font-size: 12px; font-weight: 600;
+      color: var(--text-muted);
+      padding: 16px 24px 6px;
+      text-transform: uppercase; letter-spacing: .5px;
+    }
+    .sidebar-divider { border: none; border-top: 1px solid var(--border); margin: 8px 0; }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      margin-left: var(--sidebar-w);
+      flex: 1;
+      padding: 24px 16px;
+    }
+
+    /* Filter chips */
+    .chips {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .chip {
+      background: var(--surface2); color: var(--text);
+      border: none; border-radius: 8px;
+      padding: 6px 14px; font-size: 14px; cursor: pointer;
+      transition: background .15s, color .15s;
+      white-space: nowrap;
+    }
+    .chip:hover { background: #444; }
+    .chip.active { background: var(--text); color: var(--bg); }
+
+    /* Video grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px 16px;
+    }
+
+    .video-card {
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .2s;
+    }
+    .video-card:hover { transform: translateY(-2px); }
+    .video-card:hover .thumb-overlay { opacity: 1; }
+
+    .thumb-wrap {
+      position: relative;
+      width: 100%; padding-top: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .thumb-wrap img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+    .video-card:hover .thumb-wrap img { transform: scale(1.04); }
+
+    .thumb-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,.4);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity .2s;
+    }
+    .thumb-overlay i { font-size: 48px; color: #fff; filter: drop-shadow(0 2px 6px rgba(0,0,0,.6)); }
+
+    .duration {
+      position: absolute; bottom: 6px; right: 8px;
+      background: rgba(0,0,0,.85); color: #fff;
+      font-size: 12px; font-weight: 500;
+      padding: 2px 6px; border-radius: 4px;
+    }
+
+    .video-info {
+      display: flex; gap: 12px;
+      padding: 10px 4px 4px;
+    }
+    .avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; flex-shrink: 0;
+    }
+    .video-meta h3 {
+      font-size: 14px; font-weight: 500;
+      line-height: 1.4; margin-bottom: 4px;
+      display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .channel-name {
+      font-size: 13px; color: var(--text-muted);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .channel-name i { font-size: 11px; color: var(--text-muted); }
+    .video-stats {
+      font-size: 13px; color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Verified badge */
+    .verified { color: var(--text-muted); font-size: 12px; }
+
+    /* ── SHORTS ROW ── */
+    .section-title {
+      font-size: 18px; font-weight: 600;
+      margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .section-title i { color: var(--red); }
+
+    .shorts-row {
+      display: flex; gap: 10px;
+      overflow-x: auto; padding-bottom: 8px;
+      margin-bottom: 32px;
+      scrollbar-width: none;
+    }
+    .shorts-row::-webkit-scrollbar { display: none; }
+
+    .short-card {
+      flex: 0 0 160px;
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      transition: transform .2s;
+    }
+    .short-card:hover { transform: scale(1.03); }
+    .short-thumb {
+      width: 160px; height: 285px;
+      object-fit: cover;
+      display: block;
+      background: var(--surface);
+    }
+    .short-info {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 32px 8px 10px;
+      background: linear-gradient(transparent, rgba(0,0,0,.85));
+    }
+    .short-title {
+      font-size: 13px; font-weight: 500; line-height: 1.3;
+      display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .short-views { font-size: 12px; color: #bbb; margin-top: 2px; }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-left: var(--sidebar-w);
+      padding: 24px 24px 40px;
+      font-size: 13px; color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+    .footer-links {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      aside { display: none; }
+      main, footer { margin-left: 0; }
+      .search-bar { max-width: 220px; }
+      .logo-text { display: none; }
+    }
+    @media (max-width: 480px) {
+      .nav-btn:not(:last-child) { display: none; }
+    }
+  </style>
 </head>
 <body>
-    <div id="terminal">
-        <div>Welcome to Command Prompt Clone!</div>
-        <div>Type 'help' for commands.</div>
-        <div>> <input type="text" id="input" autofocus></div>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-left">
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
+    <a href="#" class="logo">
+      <i class="fab fa-youtube logo-icon"></i>
+      <span class="logo-text">Your<span>Tube</span></span>
+    </a>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search" id="searchInput"/>
+    <button onclick="handleSearch()"><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="nav-right">
+    <button class="nav-btn" title="Microphone"><i class="fas fa-microphone"></i></button>
+    <button class="nav-btn" title="Notifications">
+      <i class="fas fa-bell"></i>
+      <span class="badge">9+</span>
+    </button>
+    <button class="nav-btn" title="Upload"><i class="fas fa-video"></i></button>
+    <button class="sign-in-btn"><i class="far fa-user-circle"></i> Sign in</button>
+  </div>
+</nav>
+
+<div class="layout">
+
+  <!-- ── SIDEBAR ── -->
+  <aside>
+    <div class="sidebar-item active" onclick="setActive(this)">
+      <i class="fas fa-home"></i> Home
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-fire"></i> Trending
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-bolt"></i> Shorts
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-play-circle"></i> Subscriptions
     </div>
 
-    <script>
-        const terminal = document.getElementById('terminal');
-        const input = document.getElementById('input');
-        let commandHistory = [];
-        let historyIndex = -1;
+    <hr class="sidebar-divider"/>
+    <div class="sidebar-section">You</div>
 
-        input.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                const command = input.value.trim();
-                commandHistory.push(command);
-                historyIndex = commandHistory.length;
-                processCommand(command);
-                input.value = '';
-                terminal.scrollTop = terminal.scrollHeight;
-            } else if (e.key === 'ArrowUp') {
-                if (historyIndex > 0) {
-                    historyIndex--;
-                    input.value = commandHistory[historyIndex];
-                }
-                e.preventDefault();
-            } else if (e.key === 'ArrowDown') {
-                if (historyIndex < commandHistory.length - 1) {
-                    historyIndex++;
-                    input.value = commandHistory[historyIndex];
-                } else {
-                    historyIndex = commandHistory.length;
-                    input.value = '';
-                }
-                e.preventDefault();
-            }
-        });
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-history"></i> History
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-list"></i> Playlists
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-video"></i> Your videos
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-clock"></i> Watch later
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-thumbs-up"></i> Liked videos
+    </div>
 
-        function processCommand(cmd) {
-            const output = document.createElement('div');
-            output.innerHTML = `> ${cmd}`;
-            terminal.appendChild(output);
+    <hr class="sidebar-divider"/>
+    <div class="sidebar-section">Explore</div>
 
-            const response = document.createElement('div');
-            switch (cmd.toLowerCase()) {
-                case 'help':
-                    response.textContent = 'Available commands: help, echo [text], clear, exit';
-                    break;
-                case 'clear':
-                    terminal.innerHTML = '';
-                    return;
-                case 'exit':
-                    response.textContent = 'Goodbye!';
-                    break;
-                default:
-                    if (cmd.startsWith('echo ')) {
-                        response.textContent = cmd.substring(5);
-                    } else {
-                        response.textContent = `'${cmd}' is not recognized as an internal or external command.`;
-                    }
-            }
-            terminal.appendChild(response);
-            terminal.appendChild(document.createElement('div')).innerHTML = '> <input type="text" id="input" autofocus>';
-            document.getElementById('input').focus();
-        }
-    </script>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-music"></i> Music
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-gamepad"></i> Gaming
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-newspaper"></i> News
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-trophy"></i> Sports
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-graduation-cap"></i> Learning
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-tshirt"></i> Fashion & Beauty
+    </div>
+
+    <hr class="sidebar-divider"/>
+    <div class="sidebar-section">More from YouTube</div>
+
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fab fa-youtube" style="color:var(--red)"></i> YouTube Premium
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-broadcast-tower"></i> Live
+    </div>
+
+    <hr class="sidebar-divider"/>
+
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-cog"></i> Settings
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-flag"></i> Report history
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-question-circle"></i> Help
+    </div>
+    <div class="sidebar-item" onclick="setActive(this)">
+      <i class="fas fa-comment-alt"></i> Send feedback
+    </div>
+  </aside>
+
+  <!-- ── MAIN ── -->
+  <main>
+
+    <!-- Filter chips -->
+    <div class="chips" id="chips">
+      <button class="chip active" onclick="filterChip(this)">All</button>
+      <button class="chip" onclick="filterChip(this)">Music</button>
+      <button class="chip" onclick="filterChip(this)">Gaming</button>
+      <button class="chip" onclick="filterChip(this)">News</button>
+      <button class="chip" onclick="filterChip(this)">Live</button>
+      <button class="chip" onclick="filterChip(this)">Coding</button>
+      <button class="chip" onclick="filterChip(this)">Cricket</button>
+      <button class="chip" onclick="filterChip(this)">Movies</button>
+      <button class="chip" onclick="filterChip(this)">Cooking</button>
+      <button class="chip" onclick="filterChip(this)">Fitness</button>
+      <button class="chip" onclick="filterChip(this)">Travel</button>
+      <button class="chip" onclick="filterChip(this)">Comedy</button>
+    </div>
+
+    <!-- Shorts Row -->
+    <div class="section-title"><i class="fas fa-bolt"></i> Shorts</div>
+    <div class="shorts-row" id="shortsRow"></div>
+
+    <!-- Video Grid -->
+    <div class="video-grid" id="videoGrid"></div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#">About</a><a href="#">Press</a><a href="#">Copyright</a>
+    <a href="#">Contact us</a><a href="#">Creators</a><a href="#">Advertise</a>
+    <a href="#">Developers</a><a href="#">Terms</a><a href="#">Privacy</a>
+    <a href="#">Policy & Safety</a><a href="#">How YouTube works</a>
+    <a href="#">Test new features</a>
+  </div>
+  <div>© 2026 YourTube Clone – Built for learning purposes</div>
+</footer>
+
+<script>
+  // ── DATA ──
+  const videos = [
+    { id:1, title:"Build a Full-Stack App with React & Node.js in 2 Hours", channel:"CodeWithHarry", avatar:"https://i.pravatar.cc/36?img=1", views:"2.3M views", ago:"3 days ago", duration:"2:04:38", thumb:"https://picsum.photos/seed/v1/480/270", verified:true },
+    { id:2, title:"Top 10 Places to Visit in India 2026 – Travel Guide", channel:"Travel With Me", avatar:"https://i.pravatar.cc/36?img=2", views:"980K views", ago:"1 week ago", duration:"18:45", thumb:"https://picsum.photos/seed/v2/480/270", verified:false },
+    { id:3, title:"MS Dhoni – The Untold Story | Full Documentary 2026", channel:"Cricket Nation", avatar:"https://i.pravatar.cc/36?img=3", views:"5.1M views", ago:"2 weeks ago", duration:"48:22", thumb:"https://picsum.photos/seed/v3/480/270", verified:true },
+    { id:4, title:"Learn Python in 1 Hour for Absolute Beginners", channel:"Tech With Tim", avatar:"https://i.pravatar.cc/36?img=4", views:"12M views", ago:"8 months ago", duration:"1:02:15", thumb:"https://picsum.photos/seed/v4/480/270", verified:true },
+    { id:5, title:"Arijit Singh Live Concert 2026 – Full Show HD", channel:"Sony Music India", avatar:"https://i.pravatar.cc/36?img=5", views:"8.7M views", ago:"5 days ago", duration:"3:22:10", thumb:"https://picsum.photos/seed/v5/480/270", verified:true },
+    { id:6, title:"BGMI Tips & Tricks That Pros Use – Season 4", channel:"Mortal Gaming", avatar:"https://i.pravatar.cc/36?img=6", views:"3.4M views", ago:"2 days ago", duration:"22:18", thumb:"https://picsum.photos/seed/v6/480/270", verified:true },
+    { id:7, title:"I Tried Every Biryani in Hyderabad – Honest Review", channel:"FoodieVibes", avatar:"https://i.pravatar.cc/36?img=7", views:"720K views", ago:"4 days ago", duration:"14:53", thumb:"https://picsum.photos/seed/v7/480/270", verified:false },
+    { id:8, title:"Stock Market for Beginners – Complete Hindi Guide", channel:"Labourlaw Advisor", avatar:"https://i.pravatar.cc/36?img=8", views:"4.2M views", ago:"3 months ago", duration:"55:07", thumb:"https://picsum.photos/seed/v8/480/270", verified:true },
+    { id:9, title:"AI Tools That Will BLOW Your Mind in 2026", channel:"Tech Burner", avatar:"https://i.pravatar.cc/36?img=9", views:"1.9M views", ago:"6 days ago", duration:"19:34", thumb:"https://picsum.photos/seed/v9/480/270", verified:true },
+    { id:10, title:"Bollywood Dance Workout – Burn 500 Calories! 🔥", channel:"Cult Fit", avatar:"https://i.pravatar.cc/36?img=10", views:"890K views", ago:"1 month ago", duration:"35:20", thumb:"https://picsum.photos/seed/v10/480/270", verified:false },
+    { id:11, title:"Minecraft Hardcore – 100 Days Survival Challenge", channel:"Dream", avatar:"https://i.pravatar.cc/36?img=11", views:"22M views", ago:"5 months ago", duration:"1:28:44", thumb:"https://picsum.photos/seed/v11/480/270", verified:true },
+    { id:12, title:"Interview with Sundar Pichai on AI & Future of Google", channel:"Google", avatar:"https://i.pravatar.cc/36?img=12", views:"6.3M views", ago:"2 weeks ago", duration:"41:09", thumb:"https://picsum.photos/seed/v12/480/270", verified:true },
+  ];
+
+  const shorts = [
+    { id:1, title:"This coding trick saved me hours 😱", views:"4.2M", thumb:"https://picsum.photos/seed/s1/160/285" },
+    { id:2, title:"Hyderabad food tour in 60 seconds!", views:"1.8M", thumb:"https://picsum.photos/seed/s2/160/285" },
+    { id:3, title:"When AI writes your code 👀", views:"9.1M", thumb:"https://picsum.photos/seed/s3/160/285" },
+    { id:4, title:"Street cricket in Mumbai 🏏", views:"3.3M", thumb:"https://picsum.photos/seed/s4/160/285" },
+    { id:5, title:"How to make Maggi in 2 mins 🍜", views:"2.7M", thumb:"https://picsum.photos/seed/s5/160/285" },
+    { id:6, title:"Sunset at Gateway of India 🌅", views:"880K", thumb:"https://picsum.photos/seed/s6/160/285" },
+    { id:7, title:"Python one-liner that blew my mind", views:"5.6M", thumb:"https://picsum.photos/seed/s7/160/285" },
+    { id:8, title:"Day in the life of an IIT student", views:"12M", thumb:"https://picsum.photos/seed/s8/160/285" },
+  ];
+
+  // ── RENDER ──
+  function renderVideos(list) {
+    const grid = document.getElementById('videoGrid');
+    grid.innerHTML = list.map(v => `
+      <div class="video-card" onclick="alert('Playing: ${v.title}')">
+        <div class="thumb-wrap">
+          <img src="${v.thumb}" alt="${v.title}" loading="lazy"/>
+          <div class="thumb-overlay"><i class="fas fa-play-circle"></i></div>
+          <span class="duration">${v.duration}</span>
+        </div>
+        <div class="video-info">
+          <img class="avatar" src="${v.avatar}" alt="${v.channel}"/>
+          <div class="video-meta">
+            <h3>${v.title}</h3>
+            <div class="channel-name">
+              ${v.channel}
+              ${v.verified ? '<i class="fas fa-check-circle verified"></i>' : ''}
+            </div>
+            <div class="video-stats">${v.views} · ${v.ago}</div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderShorts() {
+    const row = document.getElementById('shortsRow');
+    row.innerHTML = shorts.map(s => `
+      <div class="short-card" onclick="alert('Playing Short: ${s.title}')">
+        <img class="short-thumb" src="${s.thumb}" alt="${s.title}" loading="lazy"/>
+        <div class="short-info">
+          <div class="short-title">${s.title}</div>
+          <div class="short-views">${s.views} views</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // ── INTERACTIONS ──
+  function setActive(el) {
+    document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  function filterChip(el) {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  function handleSearch() {
+    const q = document.getElementById('searchInput').value.trim();
+    if (!q) return;
+    const filtered = videos.filter(v =>
+      v.title.toLowerCase().includes(q.toLowerCase()) ||
+      v.channel.toLowerCase().includes(q.toLowerCase())
+    );
+    renderVideos(filtered.length ? filtered : videos);
+  }
+
+  document.getElementById('searchInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleSearch();
+  });
+
+  // ── INIT ──
+  renderVideos(videos);
+  renderShorts();
+</script>
 </body>
 </html>
