@@ -44,7 +44,7 @@ I'm a passionate developer from **Hyderabad, India** 🇮🇳, currently learnin
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Mohammed-Ismail&show_icons=true&theme=tokyonight&hide_border=true" width="48%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mohammed-Ismail&layout=compact&theme=tokyonight&hide_border=true&hide=c%23" width="48%"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mohammed-Ismail&layout=compact&theme=tokyonight&hide_border=true" width="48%"/>
 </p>
 
 ---
