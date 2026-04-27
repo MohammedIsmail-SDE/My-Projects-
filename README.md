@@ -52,7 +52,7 @@ I'm a passionate developer from **Hyderabad, India** 🇮🇳, currently learnin
 ## 🔥 Streak
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Mohammed-Ismail&theme=tokyonight&hide_border=true"/>
+  <img src="https://streak-stats.demolab.com?user=Mohammed-Ismail&theme=tokyonight&hide_border=true&starting_year=2025"/>
 </p>
 
 ---
