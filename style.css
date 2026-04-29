@@ -3,7 +3,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --black:       #080808;
+  --black:       #130202;
   --black2:      #0f0f0f;
   --black3:      #161616;
   --black4:      #1e1e1e;
@@ -11,7 +11,7 @@
   --gold:        #c9a84c;
   --gold-light:  #e8c96a;
   --gold-dim:    #7a6230;
-  --gold-glow:   rgba(201,168,76,0.18);
+  --gold-glow:   rgba(223, 187, 86, 0.18);
   --gold-glow2:  rgba(201,168,76,0.08);
   --text:        #f0ead6;
   --text-muted:  #8a8070;
