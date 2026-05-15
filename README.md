@@ -1,74 +1,204 @@
-# 👋 Hi, I'm Mohammed Ismail
+<div align="center">
 
-> *"First, solve the problem. Then, write the code."*
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00C9A7&center=true&vCenter=true&width=700&lines=Data+Structures+%26+Algorithms+in+Python;Interview+Prep+%7C+LeetCode+%7C+HackerRank+%7C+GFG;YourTube+Clone+%7C+Live+Demo+Available!" alt="Typing SVG" />
 
----
+<br/>
 
-## 🚀 About Me
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-00C9A7?style=for-the-badge)
+![Problems](https://img.shields.io/badge/Topics-10+-FF6B6B?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-YourTube%20Clone-FF0000?style=for-the-badge)](https://mohammedismail-sde.github.io/My-Projects-/)
 
-I'm a passionate developer from **Hyderabad, India** 🇮🇳, currently learning and building projects in Python, Web Development, and Software Engineering. I love turning ideas into real working projects.
+<br/>
 
-- 🌱 I'm currently learning **Python, HTML, CSS & JavaScript**
-- 💻 I'm working on **web clones & mini projects**
-- 🎯 Goal: Become a full-stack developer
-- 📫 Open to **collaborations and learning opportunities**
+> 🚀 A clean, well-organized collection of **Data Structures & Algorithms** implemented in Python — built for **interview prep** and mapped to **LeetCode**, **HackerRank**, and **GFG** problems.
+>
+> 🎬 Also includes a **[YourTube Clone](https://mohammedismail-sde.github.io/My-Projects-/)** — a fully functional YouTube-inspired web app deployed on GitHub Pages.
 
----
-
-## 🛠️ Skills & Technologies
-
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-### Tools & Platforms
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+</div>
 
 ---
 
-## 📂 My Projects
+## 📌 Table of Contents
 
-| Project | Description | Tech Stack |
-|--------|-------------|------------|
-| 🎬 YouTube Clone | A luxury black & gold YouTube UI clone | HTML, CSS, |
-
-> More projects coming soon! Stay tuned ⭐
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Mohammed-Ismail&show_icons=true&theme=tokyonight&hide_border=true" width="48%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mohammed-Ismail&layout=compact&theme=tokyonight&hide_border=true" width="48%"/>
-</p>
+- [About](#-about)
+- [Live Demo](#-live-demo)
+- [Topics Covered](#-topics-covered)
+- [Repository Structure](#-repository-structure)
+- [Problem Mapping](#-problem-mapping)
+- [Getting Started](#-getting-started)
+- [How to Use](#-how-to-use)
+- [Contributing](#-contributing)
+- [Connect](#-connect)
 
 ---
 
-## 🔥 Streak
+## 🧠 About
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=Mohammed-Ismail&theme=tokyonight&hide_border=true&starting_year=2025"/>
-</p>
+This repository is my personal DSA study kit — designed to crack technical interviews at top product-based companies. Every topic is implemented from scratch in **Python**, with clean code, comments, and real problem references.
 
----
-
-## 🤝 Connect With Me
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mohammed-Ismail)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammed-ismail-323955297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_appl)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moammedismail3220@gmail.com )
+Whether you're a beginner building fundamentals or someone grinding LeetCode, this repo serves as a structured reference.
 
 ---
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Mohammed-Ismail&color=gold&style=flat-square" alt="Profile views"/>
-</p>
+## 🎬 Live Demo
 
-<p align="center">⭐ <i>If you like my work, consider giving my repos a star!</i> ⭐</p>
+| Project | Description | Link |
+|---------|-------------|------|
+| **YourTube Clone** | A YouTube-inspired web app with home feed, trending, shorts, navigation sidebar, and category filters — built with HTML, CSS & JavaScript | [🚀 View Live](https://mohammedismail-sde.github.io/My-Projects-/) |
 
+> Built and deployed via **GitHub Pages**. Includes features like sign-in UI, category tabs (Music, Gaming, News, Sports, Coding, and more), and a responsive layout.
 
+---
+
+## 📚 Topics Covered
+
+| # | Topic | Status |
+|---|-------|--------|
+| 01 | 📦 Arrays | ✅ Done |
+| 02 | 🔗 Linked Lists | ✅ Done |
+| 03 | 🌳 Trees | ✅ Done |
+| 04 | 🕸️ Graphs | ✅ Done |
+| 05 | 💡 Dynamic Programming | ✅ Done |
+| 06 | 🔢 Sorting & Searching | ✅ Done |
+| 07 | 🗂️ Hashing | ✅ Done |
+| 08 | ⛰️ Heaps | ✅ Done |
+| 09 | 🔤 Tries | ✅ Done |
+| 10 | ↩️ Backtracking | ✅ Done |
+
+---
+
+## 📁 Repository Structure
+
+```
+My-Projects/
+│
+├── arrays/
+│   ├── basics.py
+│   ├── sliding_window.py
+│   └── two_pointers.py
+│
+├── linked_lists/
+│   ├── singly_linked_list.py
+│   ├── doubly_linked_list.py
+│   └── problems.py
+│
+├── trees/
+│   ├── binary_tree.py
+│   ├── bst.py
+│   └── traversals.py
+│
+├── graphs/
+│   ├── bfs.py
+│   ├── dfs.py
+│   └── shortest_path.py
+│
+├── dynamic_programming/
+│   ├── memoization.py
+│   └── tabulation.py
+│
+├── sorting_searching/
+│   ├── merge_sort.py
+│   ├── quick_sort.py
+│   └── binary_search.py
+│
+├── hashing/
+│   └── hash_map_problems.py
+│
+├── heaps/
+│   └── heap_operations.py
+│
+├── tries/
+│   └── trie_implementation.py
+│
+├── backtracking/
+│   └── n_queens.py
+│
+└── README.md
+```
+
+---
+
+## 🔗 Problem Mapping
+
+Problems in this repo are mapped to popular coding platforms:
+
+| Platform | Link |
+|----------|------|
+| 🟡 LeetCode | [leetcode.com](https://leetcode.com) |
+| 🟢 HackerRank | [hackerrank.com](https://hackerrank.com) |
+| 🔵 GeeksForGeeks | [geeksforgeeks.org](https://geeksforgeeks.org) |
+
+Each file includes a comment header like:
+
+```python
+# Problem: Two Sum
+# Platform: LeetCode #1
+# Difficulty: Easy
+# Link: https://leetcode.com/problems/two-sum/
+```
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Python 3.10+
+- Git
+
+### Clone the repository
+
+```bash
+git clone https://github.com/MohammedIsmail-SDE/My-Projects-.git
+cd My-Projects-
+```
+
+---
+
+## 🚀 How to Use
+
+1. Navigate to the topic folder you want to study
+2. Each `.py` file is self-contained and can be run directly:
+
+```bash
+python arrays/sliding_window.py
+```
+
+3. Check the problem reference comments at the top of each file
+4. Trace through the code and try solving the problem yourself first!
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome!
+
+1. Fork this repository
+2. Create a new branch: `git checkout -b feature/topic-name`
+3. Commit your changes: `git commit -m "Add: Trie word search solution"`
+4. Push and open a Pull Request
+
+---
+
+## 👨‍💻 Connect
+
+<div align="center">
+
+**Mohammed Ismail**
+
+[![GitHub](https://img.shields.io/badge/GitHub-MohammedIsmail--SDE-181717?style=flat-square&logo=github)](https://github.com/MohammedIsmail-SDE)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com)
+
+_"First, solve the problem. Then, write the code."_ — John Johnson
+
+</div>
+
+---
+
+<div align="center">
+
+⭐ **If this repo helped you, drop a star!** ⭐
+
+</div>
