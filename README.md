@@ -32,7 +32,7 @@ I'm a passionate developer from **Hyderabad, India** 🇮🇳, currently learnin
 
 <br/>
 
-[![🚀 View Live Demo](https://img.shields.io/badge/🚀%20View%20Live%20Demo-YourTube%20Clone-C9A84C?style=for-the-badge)](https://mohammedismail-sde.github.io/My-Projects-/)
+[![🚀 View Live Demo](https://img.shields.io/badge/🚀%20View%20Live%20Demo-YourTube%20Clone-C9A84C?style=for-the-badge)](https://mohammedismail-sde.github.io/Youtube-Clone/)
 
 </div>
 
@@ -40,7 +40,7 @@ I'm a passionate developer from **Hyderabad, India** 🇮🇳, currently learnin
 
 ## 📸 Preview
 
-> **[→ Open Live Demo](https://mohammedismail-sde.github.io/My-Projects-/)**
+> **[→ Open Live Demo](https://mohammedismail-sde.github.io/Youtube-Clone/)**
 
 The app features a full YouTube-style layout with a dark gold aesthetic, animated video cards, a scrollable sidebar, category chips, and a Shorts row — all without any framework.
 
