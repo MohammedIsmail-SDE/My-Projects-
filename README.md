@@ -1,9 +1,24 @@
-<div align="center">
+# 👋 Hi, I'm Mohammed Ismail
 
-<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=32&pause=1000&color=C9A84C&center=true&vCenter=true&width=700&lines=🎬+YourTube+Clone;YouTube-Inspired+Web+App;Built+with+Pure+HTML+%2B+CSS" alt="Typing SVG" />
+> *"First, solve the problem. Then, write the code."*
 
-<br/>
+---
 
+## 🚀 About Me
+
+I'm a passionate developer from **Hyderabad, India** 🇮🇳, currently learning and building projects in Python, Web Development, and Software Engineering. I love turning ideas into real working projects.
+
+- 🌱 I'm currently learning **Python, HTML, CSS & JavaScript**
+- 💻 I'm working on **web clones & mini projects**
+- 🎯 Goal: Become a full-stack developer
+- 📫 Open to **collaborations and learning opportunities**
+
+---
+
+## 🛠️ Skills & Technologies
+
+### Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-222?style=for-the-badge&logo=github&logoColor=white)
@@ -141,18 +156,16 @@ This was my **first HTML/CSS project** — here's what I picked up building it:
 
 **Mohammed Ismail**
 
-[![GitHub](https://img.shields.io/badge/GitHub-MohammedIsmail--SDE-181717?style=flat-square&logo=github)](https://github.com/MohammedIsmail-SDE)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com)
-[![Live Project](https://img.shields.io/badge/Live%20Project-YourTube%20Clone-C9A84C?style=flat-square)](https://mohammedismail-sde.github.io/My-Projects-/)
-
-_"Every expert was once a beginner. This is where mine starts."_
-
-</div>
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mohammed-Ismail)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammed-ismail-323955297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_appl)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moammedismail3220@gmail.com )
 
 ---
 
-<div align="center">
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Mohammed-Ismail&color=gold&style=flat-square" alt="Profile views"/>
+</p>
 
-⭐ **If you liked this project, please star the repo — it means a lot as my first project!** ⭐
+<p align="center">⭐ <i>If you like my work, consider giving my repos a star!</i> ⭐</p>
 
-</div>
+
