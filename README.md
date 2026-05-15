@@ -1,188 +1,141 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00C9A7&center=true&vCenter=true&width=700&lines=Data+Structures+%26+Algorithms+in+Python;Interview+Prep+%7C+LeetCode+%7C+HackerRank+%7C+GFG;YourTube+Clone+%7C+Live+Demo+Available!" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=32&pause=1000&color=C9A84C&center=true&vCenter=true&width=700&lines=🎬+YourTube+Clone;YouTube-Inspired+Web+App;Built+with+Pure+HTML+%2B+CSS" alt="Typing SVG" />
 
 <br/>
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active-00C9A7?style=for-the-badge)
-![Problems](https://img.shields.io/badge/Topics-10+-FF6B6B?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-YourTube%20Clone-FF0000?style=for-the-badge)](https://mohammedismail-sde.github.io/My-Projects-/)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-222?style=for-the-badge&logo=github&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Live-00C9A7?style=for-the-badge)
 
 <br/>
 
-> 🚀 A clean, well-organized collection of **Data Structures & Algorithms** implemented in Python — built for **interview prep** and mapped to **LeetCode**, **HackerRank**, and **GFG** problems.
+> 🎬 A YouTube-inspired web app built from scratch using **pure HTML & CSS** — my **first ever web project**, deployed live on GitHub Pages.
 >
-> 🎬 Also includes a **[YourTube Clone](https://mohammedismail-sde.github.io/My-Projects-/)** — a fully functional YouTube-inspired web app deployed on GitHub Pages.
+> Dark luxury theme. Responsive layout. Real sidebar, chips, shorts, and video grid.
+
+<br/>
+
+[![🚀 View Live Demo](https://img.shields.io/badge/🚀%20View%20Live%20Demo-YourTube%20Clone-C9A84C?style=for-the-badge)](https://mohammedismail-sde.github.io/My-Projects-/)
 
 </div>
 
 ---
 
-## 📌 Table of Contents
+## 📸 Preview
 
-- [About](#-about)
-- [Live Demo](#-live-demo)
-- [Topics Covered](#-topics-covered)
-- [Repository Structure](#-repository-structure)
-- [Problem Mapping](#-problem-mapping)
-- [Getting Started](#-getting-started)
-- [How to Use](#-how-to-use)
-- [Contributing](#-contributing)
-- [Connect](#-connect)
+> **[→ Open Live Demo](https://mohammedismail-sde.github.io/My-Projects-/)**
+
+The app features a full YouTube-style layout with a dark gold aesthetic, animated video cards, a scrollable sidebar, category chips, and a Shorts row — all without any framework.
 
 ---
 
-## 🧠 About
+## ✨ Features
 
-This repository is my personal DSA study kit — designed to crack technical interviews at top product-based companies. Every topic is implemented from scratch in **Python**, with clean code, comments, and real problem references.
-
-Whether you're a beginner building fundamentals or someone grinding LeetCode, this repo serves as a structured reference.
-
----
-
-## 🎬 Live Demo
-
-| Project | Description | Link |
-|---------|-------------|------|
-| **YourTube Clone** | A YouTube-inspired web app with home feed, trending, shorts, navigation sidebar, and category filters — built with HTML, CSS & JavaScript | [🚀 View Live](https://mohammedismail-sde.github.io/My-Projects-/) |
-
-> Built and deployed via **GitHub Pages**. Includes features like sign-in UI, category tabs (Music, Gaming, News, Sports, Coding, and more), and a responsive layout.
+| Feature | Details |
+|--------|---------|
+| 🧭 **Navbar** | Logo, search bar with button, notification bell, Sign In button |
+| 📂 **Sidebar** | Home, Trending, Subscriptions, History, Playlists, Explore sections |
+| 🏷️ **Category Chips** | All, Music, Gaming, News, Live, Coding, Cricket, Movies, Cooking, and more |
+| 📱 **Shorts Row** | Horizontally scrollable Shorts section |
+| 🎥 **Video Grid** | Responsive grid with thumbnails, channel avatars, titles, views, and duration badges |
+| 🌙 **Dark Theme** | Premium dark UI with gold accents and ambient glow |
+| ✨ **Animations** | Staggered card fade-up animations, hover zoom effects, play button reveal |
+| 📐 **Responsive** | Works on desktop, tablet, and mobile |
+| 🖱️ **Micro-interactions** | Hover states on every element — sidebar, cards, chips, buttons |
 
 ---
 
-## 📚 Topics Covered
+## 🛠️ Built With
 
-| # | Topic | Status |
-|---|-------|--------|
-| 01 | 📦 Arrays | ✅ Done |
-| 02 | 🔗 Linked Lists | ✅ Done |
-| 03 | 🌳 Trees | ✅ Done |
-| 04 | 🕸️ Graphs | ✅ Done |
-| 05 | 💡 Dynamic Programming | ✅ Done |
-| 06 | 🔢 Sorting & Searching | ✅ Done |
-| 07 | 🗂️ Hashing | ✅ Done |
-| 08 | ⛰️ Heaps | ✅ Done |
-| 09 | 🔤 Tries | ✅ Done |
-| 10 | ↩️ Backtracking | ✅ Done |
+- **HTML5** — Semantic structure, accessibility-first markup
+- **CSS3** — Custom properties (variables), Flexbox, CSS Grid, animations, `backdrop-filter`
+- **Google Fonts** — [Cinzel](https://fonts.google.com/specimen/Cinzel) + [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+- **Font Awesome** — Icons throughout the UI
+- **GitHub Pages** — Free static hosting
 
 ---
 
-## 📁 Repository Structure
+## 📁 Project Structure
 
 ```
-My-Projects/
+My-Projects-/
 │
-├── arrays/
-│   ├── basics.py
-│   ├── sliding_window.py
-│   └── two_pointers.py
-│
-├── linked_lists/
-│   ├── singly_linked_list.py
-│   ├── doubly_linked_list.py
-│   └── problems.py
-│
-├── trees/
-│   ├── binary_tree.py
-│   ├── bst.py
-│   └── traversals.py
-│
-├── graphs/
-│   ├── bfs.py
-│   ├── dfs.py
-│   └── shortest_path.py
-│
-├── dynamic_programming/
-│   ├── memoization.py
-│   └── tabulation.py
-│
-├── sorting_searching/
-│   ├── merge_sort.py
-│   ├── quick_sort.py
-│   └── binary_search.py
-│
-├── hashing/
-│   └── hash_map_problems.py
-│
-├── heaps/
-│   └── heap_operations.py
-│
-├── tries/
-│   └── trie_implementation.py
-│
-├── backtracking/
-│   └── n_queens.py
-│
-└── README.md
+├── index.html       # Main HTML — full page structure
+├── style.css        # All styling — variables, layout, animations
+└── README.md        # You are here
 ```
+
+> Intentionally kept as a **single-page, zero-dependency** build — no npm, no frameworks, no bundler. Just open `index.html` and it works.
 
 ---
 
-## 🔗 Problem Mapping
+## 🚀 Getting Started
 
-Problems in this repo are mapped to popular coding platforms:
-
-| Platform | Link |
-|----------|------|
-| 🟡 LeetCode | [leetcode.com](https://leetcode.com) |
-| 🟢 HackerRank | [hackerrank.com](https://hackerrank.com) |
-| 🔵 GeeksForGeeks | [geeksforgeeks.org](https://geeksforgeeks.org) |
-
-Each file includes a comment header like:
-
-```python
-# Problem: Two Sum
-# Platform: LeetCode #1
-# Difficulty: Easy
-# Link: https://leetcode.com/problems/two-sum/
-```
-
----
-
-## ⚙️ Getting Started
-
-### Prerequisites
-
-- Python 3.10+
-- Git
-
-### Clone the repository
+### Run Locally
 
 ```bash
+# Clone the repo
 git clone https://github.com/MohammedIsmail-SDE/My-Projects-.git
+
+# Navigate into the folder
 cd My-Projects-
+
+# Open in browser (no server needed)
+open index.html
+# or just double-click index.html
 ```
 
+That's it. No installs, no config.
+
 ---
 
-## 🚀 How to Use
+## 🎨 Design Highlights
 
-1. Navigate to the topic folder you want to study
-2. Each `.py` file is self-contained and can be run directly:
+The UI is themed around a **dark luxury gold aesthetic** — inspired by premium streaming platforms.
 
-```bash
-python arrays/sliding_window.py
+```css
+--gold:       #c9a84c;   /* Primary accent */
+--black:      #130202;   /* Deep background */
+--text:       #f0ead6;   /* Warm off-white text */
+--gold-glow:  rgba(223, 187, 86, 0.18);  /* Ambient glow */
 ```
 
-3. Check the problem reference comments at the top of each file
-4. Trace through the code and try solving the problem yourself first!
+Key CSS techniques used:
+- `CSS Custom Properties` for consistent theming
+- `backdrop-filter: blur()` for frosted glass navbar & sidebar
+- `@keyframes fadeUp` with staggered `animation-delay` for card entrances
+- `radial-gradient` for ambient background lighting effects
+- `object-fit: cover` + `transform: scale()` for smooth thumbnail zoom on hover
 
 ---
 
-## 🤝 Contributing
+## 📖 What I Learned
 
-Contributions, suggestions, and improvements are welcome!
+This was my **first HTML/CSS project** — here's what I picked up building it:
 
-1. Fork this repository
-2. Create a new branch: `git checkout -b feature/topic-name`
-3. Commit your changes: `git commit -m "Add: Trie word search solution"`
-4. Push and open a Pull Request
+- How the **CSS Box Model** and `position: fixed/absolute` actually work
+- Building **complex layouts** with Flexbox and CSS Grid together
+- Writing **reusable CSS variables** instead of hardcoding values
+- Creating **smooth animations** with `@keyframes` and `transition`
+- Making pages **responsive** with `@media` queries
+- Deploying a static site to **GitHub Pages**
+- Reading and writing **semantic HTML**
 
 ---
 
-## 👨‍💻 Connect
+## 🔮 Future Plans
+
+- [ ] Add JavaScript for working search and filtering
+- [ ] Make video cards clickable with a video player modal
+- [ ] Add dark/light theme toggle with JS
+- [ ] Load video data from a JSON file
+- [ ] Add a working Sign In UI flow
+
+---
+
+## 👨‍💻 Author
 
 <div align="center">
 
@@ -190,8 +143,9 @@ Contributions, suggestions, and improvements are welcome!
 
 [![GitHub](https://img.shields.io/badge/GitHub-MohammedIsmail--SDE-181717?style=flat-square&logo=github)](https://github.com/MohammedIsmail-SDE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com)
+[![Live Project](https://img.shields.io/badge/Live%20Project-YourTube%20Clone-C9A84C?style=flat-square)](https://mohammedismail-sde.github.io/My-Projects-/)
 
-_"First, solve the problem. Then, write the code."_ — John Johnson
+_"Every expert was once a beginner. This is where mine starts."_
 
 </div>
 
@@ -199,6 +153,6 @@ _"First, solve the problem. Then, write the code."_ — John Johnson
 
 <div align="center">
 
-⭐ **If this repo helped you, drop a star!** ⭐
+⭐ **If you liked this project, please star the repo — it means a lot as my first project!** ⭐
 
 </div>
