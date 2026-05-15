@@ -1,18 +1,17 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=32&pause=1000&color=C9A84C&center=true&vCenter=true&width=700&lines=🎬+YourTube+Clone;YouTube-Inspired+Web+App;Built+with+HTML+%2B+CSS+%2B+JavaScript" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=32&pause=1000&color=C9A84C&center=true&vCenter=true&width=700&lines=🎬+YourTube+Clone;YouTube-Inspired+Web+App;Built+with+Pure+HTML+%2B+CSS" alt="Typing SVG" />
 
 <br/>
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-222?style=for-the-badge&logo=github&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Live-00C9A7?style=for-the-badge)
 
 <br/>
 
-> 🎬 A YouTube-inspired web app built from scratch using **pure HTML, CSS & JavaScript** — my **first ever web project**, deployed live on GitHub Pages.
+> 🎬 A YouTube-inspired web app built from scratch using **pure HTML & CSS** — my **first ever web project**, deployed live on GitHub Pages.
 >
 > Dark luxury theme. Responsive layout. Real sidebar, chips, shorts, and video grid.
 
@@ -52,7 +51,6 @@ The app features a full YouTube-style layout with a dark gold aesthetic, animate
 
 - **HTML5** — Semantic structure, accessibility-first markup
 - **CSS3** — Custom properties (variables), Flexbox, CSS Grid, animations, `backdrop-filter`
-- **Vanilla JavaScript** — DOM manipulation, interactivity
 - **Google Fonts** — [Cinzel](https://fonts.google.com/specimen/Cinzel) + [DM Sans](https://fonts.google.com/specimen/DM+Sans)
 - **Font Awesome** — Icons throughout the UI
 - **GitHub Pages** — Free static hosting
@@ -69,7 +67,7 @@ My-Projects-/
 └── README.md        # You are here
 ```
 
-> Intentionally kept as a **single-page, zero-dependency** build — no npm, no React, no bundler. Just open `index.html` and it works.
+> Intentionally kept as a **single-page, zero-dependency** build — no npm, no frameworks, no bundler. Just open `index.html` and it works.
 
 ---
 
@@ -115,7 +113,7 @@ Key CSS techniques used:
 
 ## 📖 What I Learned
 
-This was my **first HTML/CSS/JS project** — here's what I picked up building it:
+This was my **first HTML/CSS project** — here's what I picked up building it:
 
 - How the **CSS Box Model** and `position: fixed/absolute` actually work
 - Building **complex layouts** with Flexbox and CSS Grid together
@@ -129,10 +127,10 @@ This was my **first HTML/CSS/JS project** — here's what I picked up building i
 
 ## 🔮 Future Plans
 
-- [ ] Add JavaScript-powered search filtering
+- [ ] Add JavaScript for working search and filtering
 - [ ] Make video cards clickable with a video player modal
-- [ ] Add dark/light theme toggle
-- [ ] Load video data from a JSON file instead of hardcoded HTML
+- [ ] Add dark/light theme toggle with JS
+- [ ] Load video data from a JSON file
 - [ ] Add a working Sign In UI flow
 
 ---
