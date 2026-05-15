@@ -1,8 +1,4 @@
-<div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=32&pause=1000&color=C9A84C&center=true&vCenter=true&width=700&lines=🎬+YourTube+Clone;YouTube-Inspired+Web+App;Built+with+Pure+HTML+%2B+CSS" alt="Typing SVG" />
-
-<br/>
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
